@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i&display=swap&subset=cyrillic,greek-ext"
+          rel="stylesheet">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>Компьютерное зрение</h1>
+        </section>
+        <section>
+            <h2>Кто умеет программировать на Python?</h2>
+        </section>
+        <section>
+            <section>
+                <h2>Перед началом</h2>
+            </section>
+            <section>
+                <h3>Какие инструменты?</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>NumPy</li>
+                    <li>OpenCV</li>
+                    <li>Matplotlib</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Почему Python?</h3>
+                <ul>
+                    <li>Удобный и простой</li>
+                    <li>Имеет сборщик мусора</li>
+                    <li>Интерактивный</li>
+                    <li>NumPy</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Что установить?</h3>
+                <ul>
+                    <li><a href="https://www.anaconda.com/distribution/">Anaconda</a></li>
+                    <li><a href="https://anaconda.org/conda-forge/opencv">OpenCV</a></li>
+                    <li>IDE: <a href="https://www.jetbrains.com/pycharm/download">PyCharm</a> /
+                        <a href="https://code.visualstudio.com/">VS Code</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Что такое Компьютерное зрение?</h3>
+
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>О компьютерном зрении</h2>
+            </section>
+            <section>
+                <p>Компьютерное зрение — технология, которая позволяет машинам находить, отслеживать и классифицировать
+                    информацию, извлекаемую из изображения</p>
+            </section>
+            <section>
+                <h3>Цель</h3>
+                <p>Формирование полезных выводов относительно объектов и сцен реального мира на основе изображений,
+                    полученных с помощью датчиков</p>
+            </section>
+            <section>
+                <h3>Два раздела</h3>
+                <ul>
+                    <li>Обработка цифровых изображений</li>
+                    <li>Компьютерное зрение</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Обработка цифровых изображений</h3>
+                <ul>
+                    <li>Модификация изображений</li>
+                    <li>Улучшение качества</li>
+                    <li>Комбинирование нескольких изображений</li>
+                    <li>Вычисление характерных признаков</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Основы Python</h2>
+            </section>
+            <section>
+                <h3>Проверка</h3>
+                <pre><code class="python" data-trim>>>> print("Hello World")</code></pre>
+            </section>
+            <section>
+                <h3>Немного кода</h3>
+                <pre><code data-trim class="python">
+                    >>> a = 2
+                    >>> b = 3
+                    >>> print(a / b)
+                    >>> d = a * b
+                    >>> s = "Loooool"
+                    >>> print(s + s)
+                </code></pre>
+                <p>Что такое <code>a</code>, <code>b</code>, <code>d</code>, <code>s</code>?</p>
+            </section>
+            <section>
+                <h3>Численные типы</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = 2
+                    >>> type(a)
+                    >>> b = 2.5
+                    >>> type(b)
+                    >>> c = 4 / 2
+                    >>> type(c)
+                </code></pre>
+            </section>
+            <section>
+                <h3>Операции над числами</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> 1 + 2
+                    >>> 2 - 3
+                    >>> 3 * 4
+                    >>> 5 / 6
+                    >>> 7 % 6
+                    >>> 2 ** 10
+                </code></pre>
+            </section>
+            <section>
+                <h3>Преобразования типов</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> int(12.5)
+                    >>> float(10)
+                </code></pre>
+            </section>
+            <section>
+                <h3>Логический тип</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = True
+                    >>> b = 5 > 6
+                    >>> c = False
+                </code></pre>
+            </section>
+            <section>
+                <h3>Списки</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = [1, 2, 18, 24]
+                    >>> b = ['lol', ['kek'], 123]
+                    >>> type(a)
+                </code></pre>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = [1, 2, 18, 24]
+                    >>> a[-1]
+                    >>> a[0]
+                    >>> a[0:2]
+                    >>> a[-2:]
+                </code></pre>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = [1, 2, 18, 24]
+                    >>> a.append('LOOOOOOL')
+                    >>> print(a)
+                    >>> a.pop()
+                    >>> print(a)
+                </code></pre>
+            </section>
+            <section>
+                <h3>Строки</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = 'Lol'
+                    >>> b = "Kek"
+                    >>> c = """Che
+                    burek"""
+                    >>> d = '''L
+                    ol
+                    '''
+                </code></pre>
+            </section>
+            <section>
+                <h3>Словари</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = {1: 1, 2: 4, 3: 9}
+                    >>> b = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}
+                    >>> a[2]
+                    >>> b['UP']
+                    >>> list(a)
+                    >>> list(b.values())
+                    >>> 'LEFT' in b
+                </code></pre>
+            </section>
+            <section>
+                <h3>Условия</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> a = 5
+                    >>> if a < 10:
+                    >>>     print('YES')
+                    >>> else:
+                    >>>     print('NO')
+                </code></pre>
+            </section>
+            <section>
+                <h3>Цикл FOR</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> for i in range(10):
+                    >>>     print(i)
+                    >>> for i in range(1, 10, 2):
+                    >>>     print(j)
+                </code></pre>
+            </section>
+            <section>
+                <h3>Списковые выражения</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> pows = [i ** 2 for i in range(50)]
+                </code></pre>
+            </section>
+            <section>
+                <h3>Функции</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> def pow(a, b):
+                    >>>     return a ** b
+                    >>> pow(2, 10)
+                </code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Обработка цифровых изображения</h2>
+            </section>
+            <section>
+                <h3>Работа с NumPy</h3>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> import numpy as np
+                    >>> a = np.zeros((5, 10))
+                    >>> print(a)
+                    >>> b = a + 5
+                    >>> print(b)
+                    >>> c = b / 2
+                    >>> print(c)
+                </code></pre>
+            </section>
+            <section>
+                <pre><code class="python" data-trim data-noescape>
+                    >>> import matplotlib.pyplot as plt
+                    >>> a = np.zeros((100, 100, 3), dtype='uint8')
+                    >>> a[:, ::4, ::2] = 255
+                    >>> plt.imshow(a)
+                    >>> plt.show()
+                </code></pre>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        hash: true,
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/highlight/highlight.js'},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
